@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>uHost Customers</title>
-    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="shortcut icon" href="../images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="customers.css">
@@ -14,6 +14,11 @@
     <div class="backdrop"></div>
     <header class="main-header">
         <div>
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+                <span class="toggle-button__bar"></span>
+            </button>
             <a href="../index.html" class="main-header__brand">
                 <img src="../images/uhost-icon.png" alt="uHost - Your favorite hosting company">
             </a>
@@ -32,6 +37,14 @@
             </ul>
         </nav>
     </header>
+    <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="../packages/packages.html">Packages</a></li>
+                <li class="main-nav__item"><a href="customers.html">Customers</a></li>                
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="../start-hostine/index.html">Start Hosting</a></li>
+            </ul>
+        </nav>
     <main>
         <div>
             <div class="testimonial" id="customer-1">
@@ -77,6 +90,7 @@
             </ul>
         </nav>
     </footer>
+    <script src="../main.js"></script>
 </body>
 </html>
 

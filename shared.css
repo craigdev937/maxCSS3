@@ -14,8 +14,8 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0,0,0,0.5);
 }
 
@@ -34,6 +34,28 @@ body {
     vertical-align: middle;
 }
 
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button__bar {
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+}
+
 .main-header__brand {
     color: #D6CFCB;
     text-decoration: none;
@@ -41,6 +63,7 @@ body {
     font-size: 22px;
     height: 22px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .main-header__brand img {
@@ -50,7 +73,7 @@ body {
 .main-nav {
     display: inline-block;
     text-align: right;
-    width: calc(100% - 74px);
+    width: calc(100% - 122px);
     vertical-align: middle;
 }
 
@@ -62,14 +85,15 @@ body {
 
 .main-nav__item {
     display: inline-block;
-    margin: 0 16px;
+    margin: 0 1rem;
 }
 
-.main-nav__item a {
+.main-nav__item a,
+.mobile-nav__item a {
     text-decoration: none;
     color: #D6CFCB;
     font-weight: bold;
-    padding: 3px 0;
+    padding: 0.2rem 0;
 }
 
 .main-nav__item a:hover,
@@ -78,7 +102,8 @@ body {
     border-bottom: 5px solid white;
 }
 
-.main-nav__item--cta a {
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
     color: #fff;
     background-color: #ff1b68;
     padding: 8px 16px;
@@ -86,7 +111,9 @@ body {
 }
 
 .main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
     color: #ff1b68;
     background-color: #fff;
     border: none;
@@ -120,6 +147,34 @@ body {
     color: #ccc;
 }
 
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: #FFB4A2;
+    width: 80%;
+    height: 100vh;
+}
+
+.mobile-nav__items {
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 10% auto;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-nav__item {
+    margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+    font-size: 1.5rem;
+}
+
 .button {
     background-color: #272838;
     color: #fff;
@@ -140,4 +195,8 @@ body {
 .button:focus {
     outline: none;
 }
+
+/* .open {
+    display: block !important;
+} */
 
